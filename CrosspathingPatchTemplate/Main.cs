@@ -14,7 +14,7 @@ namespace CrosspathingPatchTemplate
         public override void Postmerge(TowerModel towerModel, string baseId, int topPath, int middlePath,
             int bottomPath)
         {
-            if (baseId == TowerType.DartMonkey && topPath >= 3 && middlePath >= 3)
+            if (baseId == TowerType.DartMonkey && topPath >= 5 && middlePath >= 5)
             {
                 towerModel.baseId = TowerType.DartMonkey;
                 MelonLogger.Msg("I'm doing my part!");
@@ -23,7 +23,7 @@ namespace CrosspathingPatchTemplate
 
         public override void ModifyPathPriorities(Dictionary<string, (int, int, int)> pathPriorities)
         {
-            pathPriorities[TowerType.TackShooter] = (2, 0, 1);
+            pathPriorities[TowerType.TackShooter] = (5, 5, 5);
         }
     }
 }
